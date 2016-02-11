@@ -1,5 +1,9 @@
 <h1>Statuses</h1>
 
+<%= link_to 'Previous Page', page: @page -1 %>
+<%= link_to 'Next Page', page: @page +1 %>
+
+
 <% @statuses.each do |s| %>
   <%= div_for s do %>
     <p><%= s.body %></p>
