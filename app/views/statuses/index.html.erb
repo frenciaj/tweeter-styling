@@ -1,11 +1,54 @@
-<h1>Statuses</h1>
+<div class="global nav">
+  <img class="header" src="https://g.twimg.com/Twitter_logo_blue.png" alt="#"></img>
+</div>
+<hr>
+<div class="left dashboard">
+  <a class="dashboardprofile u-block"></a>
+  <img class="dashboardpic" src= "http://pickaface.net/includes/themes/clean/img/slide2.png" alt= "#"/>
+  <div class="dash-userinfo">
+    <div class="dashusernamediv">
+      <a class="dashusername">Tatan</a><br>
+      <a class="twituser">@tanquef</a>
+    </div>
+    <div class="profilestats">
+      <ul class="datastats arrange">
+        <li><span>TWEETS</span><br>
+          <span>3400</span>
+        </li>
+        <li>
+          <span>FOLLOWING</span><br>
+          <span>540</span>
+        </li>
+        <li>
+          <span>FOLLOWERS</span><br>
+          <span>6780</span>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
 
-<%= link_to 'Previous Page', page: @page -1 %>
-<%= link_to 'Next Page', page: @page +1 %>
+    <div class="main info">
+      <% @statuses.each do |s| %>
+      <%= div_for s do %>
+      <img class= "avatar" alt="#" src="http://pickaface.net/includes/themes/clean/img/slide2.png"></img>
+      <strong class="username">Tatan</strong> @tanquef - <%= time_ago_in_words s.created_at %> ago
+
+      <p><%= s.body %></p>
+      <div class="icons"><i class="fa fa-reply"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i><i class="fa fa-ellipsis-h"></i>
 
 
-<% @statuses.each do |s| %>
-  <%= div_for s do %>
-    <p><%= s.body %></p>
-  <% end %>
-<% end %>
+      </div>
+      <% end %>
+      <% end %>
+
+      <br>
+
+      <div class="pages">
+        <%= link_to 'Previous Page', page: @page -1 %>
+        <%= link_to 'Next Page', page: @page +1 %>
+      </div>
+    </div>
+
+    <div class="right dashboard">
+    </div>
