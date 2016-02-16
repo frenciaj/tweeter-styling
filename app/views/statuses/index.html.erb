@@ -12,16 +12,16 @@
     </div>
     <div class="profilestats">
       <ul class="datastats arrange">
-        <li><span>TWEETS</span><br>
-          <span>3400</span>
+        <li><span class="title">TWEETS</span><br>
+          <span class="data"><strong>3400</strong></span>
         </li>
         <li>
-          <span>FOLLOWING</span><br>
-          <span>540</span>
+          <span class="title">FOLLOWING</span><br>
+          <span class="data"><strong>540</strong></span>
         </li>
         <li>
-          <span>FOLLOWERS</span><br>
-          <span>6780</span>
+          <span class="title">FOLLOWERS</span><br>
+          <span class="data"><strong>6780</strong></span>
         </li>
       </ul>
       </div>
@@ -29,6 +29,12 @@
   </div>
 
     <div class="main info">
+      <div class="tweetbox">
+        <div class="component">
+          <img class="compimage" src="http://pickaface.net/includes/themes/clean/img/slide2.png" alt="#"/>
+          <form class="form" method="post" data-condensed-text="whats going on?">
+        </div>
+      </div>
       <% @statuses.each do |s| %>
       <%= div_for s do %>
       <img class= "avatar" alt="#" src="http://pickaface.net/includes/themes/clean/img/slide2.png"></img>
@@ -51,4 +57,31 @@
     </div>
 
     <div class="right dashboard">
+      <div class="flex module">
+        <div class="flex-header">
+        <h3>Who to follow?</h3>
+        <small>.</small>
+        <a class="dash-who" href="#" alt="#">refresh</a>
+        <small>.</small>
+        <a class="dash-who" href="#" alt="#">view all</a>
+      </div>
+      <div class="friendsdiv">
+        <img class="friends" src="https://pbs.twimg.com/profile_images/649695174046707716/A24Us0lK_normal.jpg"></img>
+        <span class="friends-data"><b>Joseph Ciancio</b></span>
+        <span class="friends-data h">@jciancio7</span>
+        <button class="one">Follow</button>
+      </div>
+      <div class="friendsdiv">
+        <img class="friends" src="https://pbs.twimg.com/profile_images/654646897504743424/94hzYITP_normal.jpg"></img>
+        <span class="friends-data"><b>Madelene Campos</b></span>
+        <span class="friends-data h">@maddie</span>
+        <button class="one">Follow</button>
+      </div>
+      <div class="friendsdiv">
+        <img class="friends" src="https://pbs.twimg.com/profile_images/694666518508888066/n9YEn_74_normal.jpg"></img>
+        <span class="friends-data"><b>Paul Ingelmo</b></span>
+        <span class="friends-data h">@causipocket</span>
+        <button class="one">Follow</button>
+      </div>
+      </div>
     </div>
