@@ -150,8 +150,22 @@ li {
   padding-top: 13px;
 
 }
-.form {
-  width: 400px;
+.fa.fa-camera-retro.fa-lg {
+  color: #blue;
+  flex: left;
+  position: absolute;
+  margin-left: 400px;
+  margin-top: 20px;
+
+}
+.form-control {
+  width: 420px;
+  height: 8px;
+  position: absolute;
+  padding-top: 24px;
+  margin-left: 6px;
+  margin-top: 10px;
+  border-radius: 3px;
   border: lightblue;
 }
 .flex-header {
